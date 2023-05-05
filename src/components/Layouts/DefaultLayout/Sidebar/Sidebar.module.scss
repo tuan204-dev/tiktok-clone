@@ -1,0 +1,8 @@
+@import '../../../../scss/variable';
+
+
+.wrapper {
+  width: $sidebar-width;
+  background-color: #ccc;
+  min-height: 1000px;
+}
