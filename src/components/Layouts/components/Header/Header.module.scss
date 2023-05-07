@@ -21,6 +21,11 @@
 
 
 // Search
+
+.search {
+  position: relative;
+}
+
 .form {
   position: relative;
   background-color: #f1f1f2;
@@ -41,7 +46,7 @@
     caret-color: $primary-color;
   }
 
-  .search-input:not(:placeholder-shown) ~ .search-btn {
+  .search-input:not(:placeholder-shown)~.search-btn {
     color: #4b4c55;
   }
 
@@ -71,12 +76,18 @@
       background-color: #d7d7d9;
     }
   }
+}
 
+.popper {
+  position: absolute;
+  top: 100%;
+  width: 100%;
 }
 
 
-.clear, .loading {
-  margin-inline: 16px;
+.clear,
+.loading {
+  padding: 10px 16px;
   position: absolute;
   right: 52px;
   color: #a6a7ab;
@@ -88,6 +99,10 @@
   display: none;
 }
 
+.clear {
+  background-color: #f1f1f2;
+  cursor: pointer;
+}
 
 
 // Action
@@ -99,10 +114,12 @@
 
   .upload {
     padding-inline: 16px;
+    margin-right: 10px;
     background-color: inherit;
     border: 1px solid rgba(22, 24, 35, 0.12);
     font-weight: 500;
     font-size: 1.6rem;
+
     &:hover {
       background-color: #f8f8f8;
       cursor: pointer;
@@ -115,16 +132,18 @@
   }
 
 
-  .message, .notification {
-    margin-left: 20px;
+  .message,
+  .notification {
+    margin-inline: 10px;
     font-size: 2rem;
+    position: relative;
     cursor: pointer;
   }
 
   .profile {
     width: 36px;
     height: 100%;
-    margin-left: 24px;
+    margin-left: 14px;
     overflow: hidden;
     border-radius: 50%;
     cursor: pointer;
@@ -135,4 +154,8 @@
       object-fit: contain;
     }
   }
+}
+
+.hidden {
+  display: none;
 }
